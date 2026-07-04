@@ -1,0 +1,19 @@
+# Ambientes Virtuais
+.venv/
+venv/
+env/
+
+# Banco de dados local (nunca deve ir para o GitHub por segurança e conflitos)
+db.sqlite3
+
+# Arquivos temporários do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configurações do VS Code ou outros editores
+.vscode/
+.idea/
+
+# Arquivos de ambiente (se criarmos no futuro)
+.env
