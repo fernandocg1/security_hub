@@ -13,7 +13,6 @@ dados = {
     "is_emergency": True
 }
 
-# Fazendo o disparo
 resposta = requests.post(url, headers=headers, json=dados)
 
 print("Status Code:", resposta.status_code)

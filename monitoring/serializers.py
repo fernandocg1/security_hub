@@ -3,13 +3,11 @@ from .models import Device, EventLog
 from django.contrib.auth import get_user_model
 from django.contrib.auth import authenticate
 
-# 1. SERIALIZERS PARA O MODELO Device
 class DeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Device
         fields = ['id', 'name', 'device_type', 'is_active']
 
-# 2. SERIALIZERS PARA O MODELO EventLog
 class EventLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = EventLog
