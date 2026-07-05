@@ -8,4 +8,5 @@ router.register(r'events', views.EventLogViewSet, basename='event')
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('login/', views.login_user, name='login_user'),
 ]

@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     
     # Nossas ferramentas do projeto:
     'rest_framework',                # Ferramenta para criar as APIs para o celular e ESP32
-    'monitoring',                    # O nosso aplicativo de sensores
+    'monitoring',    
+    'rest_framework.authtoken'                # O nosso aplicativo de sensores
 ]
 
 MIDDLEWARE = [
@@ -78,3 +79,12 @@ USE_TZ = True
 # 7. ARQUIVOS ESTÁTICOS E CHAVE PRIMÁRIA
 STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
